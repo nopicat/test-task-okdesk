@@ -1,0 +1,10 @@
+<main>
+    <cat-card
+        [card]="card"
+        (nextClicked)="next()"
+        (likeClicked)="like()"
+        *ngIf="!isCardLoading"
+    />
+
+    <card-loading *ngIf="isCardLoading" />
+</main>

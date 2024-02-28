@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="header">
+        <div class="image"></div>
+
+        <div class="text">
+            <span class="title">
+                {{ card?.name }}
+            </span>
+            <span class="subtitle">
+                {{ card?.breed }}
+            </span>
+        </div>
+    </div>
+
+    <div class="cover"></div>
+
+    <div class="body">
+        <div class="title">
+            {{ card?.name }}
+        </div>
+        <div class="subtitle">
+            {{ card?.habit }}
+        </div>
+        <div class="text">
+            {{ card?.description }}
+        </div>
+
+        <div class="buttons">
+            <button class="next" (click)="nextClicked.emit()">Следующий</button>
+            <button class="like" (click)="likeClicked.emit()">
+                <img src="assets/icons/like.svg" alt="like" />
+            </button>
+        </div>
+    </div>
+</div>

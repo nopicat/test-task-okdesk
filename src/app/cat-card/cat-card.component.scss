@@ -1,0 +1,107 @@
+.card {
+    font-family: Source Code Pro, sans-serif;
+    background: #ffffff;
+    width: 342px;
+    border-radius: 12px;
+    border: 1px solid #e7e7e7;
+
+    transition: all ease 0.5s;
+
+    &:hover {
+        box-shadow: 0 5px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .header {
+        padding: 16px 24px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .image {
+            background: #f5f5f5;
+
+            border-radius: 50%;
+            height: 32px;
+            width: 32px;
+        }
+
+        .text {
+            margin-left: 8px;
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                font-weight: 400;
+                color: #666666;
+            }
+        }
+    }
+
+    .cover {
+        width: 100%;
+        height: 198px;
+        background: #f5f5f5;
+    }
+
+    .body {
+        padding: 24px;
+
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            margin-top: 2px;
+            font-size: 14px;
+            color: #3c3c43;
+        }
+
+        .text {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            margin-top: 24px;
+
+            button {
+                cursor: pointer;
+                font-family: Source Code Pro, sans-serif;
+                font-size: 12px;
+                font-weight: 400;
+                padding: 0 12px;
+                height: 31px;
+                border-radius: 100px;
+
+                transition: background-color ease 0.5s;
+
+                &.next {
+                    border: 1px #3c3c43 solid;
+                    background: #ffffff;
+
+                    &:hover {
+                        background: #3c3c43;
+                        color: #ffffff;
+                    }
+                }
+
+                &.like {
+                    margin-left: 16px;
+                    border: none;
+                    background: #3c3c43;
+                }
+            }
+        }
+    }
+}
