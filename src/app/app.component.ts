@@ -20,8 +20,13 @@ export class AppComponent implements OnInit {
     private cardId = 1;
     public isCardLoading = false;
     public card?: ICard;
+    public liked = false;
+    public isButtonsDisabled = false;
 
     public async loadCurrentCard() {
+        this.liked = false;
+        this.isButtonsDisabled = false;
+
         this.isCardLoading = true;
         this.card = await this.catCardService.getCard(this.cardId);
         this.isCardLoading = false;
@@ -38,12 +43,12 @@ export class AppComponent implements OnInit {
     }
 
     public async like() {
-        this.isCardLoading = true;
+        this.isButtonsDisabled = true;
         const { liked } = await this.catCardService.like(this.cardId);
-        this.isCardLoading = false;
+        this.isButtonsDisabled = false;
 
         if (liked) {
-            await this.next();
+            this.liked = true;
         }
     }
 

@@ -1,6 +1,8 @@
 <main>
     <cat-card
         [card]="card"
+        [liked]="liked"
+        [isButtonsDisabled]="isButtonsDisabled"
         (nextClicked)="next()"
         (likeClicked)="like()"
         *ngIf="!isCardLoading"

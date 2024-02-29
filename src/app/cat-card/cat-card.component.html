@@ -26,8 +26,8 @@
         </div>
 
         <div class="buttons">
-            <button class="next" (click)="nextClicked.emit()">Следующий</button>
-            <button class="like" (click)="likeClicked.emit()">
+            <button [disabled]="isButtonsDisabled" class="next" (click)="nextClicked.emit()">Следующий</button>
+            <button [disabled]="isButtonsDisabled" *ngIf="!liked" class="like" (click)="likeClicked.emit()">
                 <img src="assets/icons/like.svg" alt="like" />
             </button>
         </div>

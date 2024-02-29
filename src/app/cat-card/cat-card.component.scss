@@ -102,6 +102,11 @@
                     border: none;
                     background: #3c3c43;
                 }
+
+                &:disabled {
+                    cursor: not-allowed;
+                    opacity: 0.5;
+                }
             }
         }
     }
